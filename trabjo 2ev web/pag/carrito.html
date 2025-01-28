@@ -17,5 +17,55 @@
                 <li><a href="">CALENDARIO</a></li>
             </ul>
         </div>
+    </div>
+    <div class="contenido">
+        <section class="carrito">
+            <div class="container">
+                <h1>Tu Carrito</h1>
+                <table class="carrito-tabla">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Producto 1</td>
+                            <td>$10.00</td>
+                            <td>
+                                <input type="number" value="1" min="1" class="cantidad-input">
+                            </td>
+                            <td>$10.00</td>
+                            <td>
+                                <button class="btn btn-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Producto 2</td>
+                            <td>$15.00</td>
+                            <td>
+                                <input type="number" value="1" min="1" class="cantidad-input">
+                            </td>
+                            <td>$15.00</td>
+                            <td>
+                                <button class="btn btn-eliminar">Eliminar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="carrito-resumen">
+                    <h3>Resumen del Pedido</h3>
+                    <p><strong>Subtotal:</strong> $25.00</p>
+                    <p><strong>Envío:</strong> $5.00</p>
+                    <p><strong>Total:</strong> $30.00</p>
+                    <button class="btn btn-comprar">Proceder al Pago</button>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
