@@ -73,7 +73,7 @@ a{
 }
 
 button {
-    background-color: #28a745;
+    background-color: #ff4747;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -82,7 +82,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: red;
 }
 
 .weekdays, .days {
@@ -111,4 +111,25 @@ button:hover {
 .empty {
     background: transparent;
     pointer-events: none;
+}
+.cabecera{
+    background-color: #ff4747;
+    font-size: 20px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-top: 10px;
+}
+.cabecera .informacion p{
+    text-align: center;
+}
+.cabecera .informacion{
+    text-align: center;
+}
+.cabecera .informacion img{
+    width: 50px;
+    display: inline-block;
+    margin: 0 10px;            
 }
