@@ -60,6 +60,9 @@ a{
     margin: 0 auto;
     border: 5px solid black;
 }
+.contenido .texto2 img:hover{
+    animation: float 2s infinite ease-in-out;
+}
 .contenido .titulo3 h2{
     text-align: center;
 }
