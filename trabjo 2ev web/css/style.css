@@ -43,7 +43,7 @@ a{
     border: 2px solid black;
 }
 .contenido{
-    background-color: #ff4747;
+    background-color: white;
     font-size: 20px;
     padding: 10px;
     border-top-left-radius: 10px;
@@ -66,7 +66,7 @@ a{
 .contenido .texto3 p{
     text-align: center;
 }
-.contenido h1{
+.carrito h1{
     text-align: center;
 }
 .cabecera{
@@ -93,6 +93,9 @@ a{
 .productos {
     padding: 2rem 0;
     background: #f9f9f9;
+}
+.tituloTienda h1{
+    text-align: center;
 }
 
 .productos h2 {
