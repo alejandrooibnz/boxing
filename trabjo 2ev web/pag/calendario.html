@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../css/style3.css">
 </head>
 <body>
     <div class="principal">
@@ -20,22 +20,67 @@
     </div>
     <div class="contenido">
         <div class="calendar-container">
-            <h2>Selecciona una fecha para reservar</h2>
-            <input type="date" id="fechaReserva">
-            <button onclick="reservarFecha()">Reservar</button>
-            <p id="mensaje"></p>
+            <h2>Calendario de Reservas</h2>
+            <div class="calendar">
+                <div class="month">
+                    <button id="prevMonth">&#10094;</button>
+                    <h3 id="monthYear"></h3>
+                    <button id="nextMonth">&#10095;</button>
+                </div>
+                <div class="weekdays">
+                    <div>Dom</div>
+                    <div>Lun</div>
+                    <div>Mar</div>
+                    <div>Mié</div>
+                    <div>Jue</div>
+                    <div>Vie</div>
+                    <div>Sáb</div>
+                </div>
+                <div class="days" id="days"></div>
+            </div>
         </div>
         
         <script>
-            function reservarFecha() {
-                const fecha = document.getElementById('fechaReserva').value;
-                if (fecha) {
-                    document.getElementById('mensaje').innerText = `Has reservado la fecha: ${fecha}`;
-                } else {
-                    document.getElementById('mensaje').innerText = 'Por favor, selecciona una fecha.';
+            const daysContainer = document.getElementById("days");
+            const monthYear = document.getElementById("monthYear");
+            const prevMonth = document.getElementById("prevMonth");
+            const nextMonth = document.getElementById("nextMonth");
+            let date = new Date();
+    
+            function renderCalendar() {
+                date.setDate(1);
+                const firstDayIndex = date.getDay();
+                const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+                monthYear.innerText = date.toLocaleString("es-ES", { month: "long", year: "numeric" });
+                
+                daysContainer.innerHTML = "";
+                for (let i = 0; i < firstDayIndex; i++) {
+                    const emptyDiv = document.createElement("div");
+                    emptyDiv.classList.add("empty");
+                    daysContainer.appendChild(emptyDiv);
+                }
+                for (let i = 1; i <= lastDay; i++) {
+                    const dayDiv = document.createElement("div");
+                    dayDiv.innerText = i;
+                    dayDiv.classList.add("day");
+                    dayDiv.addEventListener("click", () => alert(`Has seleccionado el ${i} de ${monthYear.innerText}`));
+                    daysContainer.appendChild(dayDiv);
                 }
             }
+    
+            prevMonth.addEventListener("click", () => {
+                date.setMonth(date.getMonth() - 1);
+                renderCalendar();
+            });
+            
+            nextMonth.addEventListener("click", () => {
+                date.setMonth(date.getMonth() + 1);
+                renderCalendar();
+            });
+            
+            renderCalendar();
         </script>
+
     </div>
     
 </body>
