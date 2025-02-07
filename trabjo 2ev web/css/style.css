@@ -54,6 +54,21 @@ a{
     
 }
 
+.contenido .titulo1{
+    text-align: center;
+}
+.texto1{
+    text-align: center;
+}
+.titulo2{
+    text-align: center;
+}
+.texto2{
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 .contenido .texto2 img{
     width: 20%;
     display: block;
