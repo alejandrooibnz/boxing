@@ -125,3 +125,74 @@ button:hover {
     display: inline-block;
     margin: 0 10px;            
 }
+@media (max-width: 768px) {
+    .carrito-tabla th, .carrito-tabla td {
+        padding: 0.8rem;
+        font-size: 14px;
+    }
+    
+    .cantidad-input {
+        width: 50px;
+        padding: 0.4rem;
+    }
+    
+    .carrito-resumen {
+        padding: 1rem;
+    }
+    
+    .principal, .cabecera {
+        font-size: 18px;
+        padding: 8px;
+    }
+    
+    .contenido {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .carrito-tabla {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .carrito-tabla th, .carrito-tabla td {
+        padding: 0.6rem;
+        font-size: 12px;
+    }
+    
+    .cantidad-input {
+        width: 40px;
+        padding: 0.3rem;
+    }
+    
+    .carrito-resumen {
+        padding: 0.8rem;
+    }
+    
+    .carrito-resumen h3 {
+        font-size: 16px;
+    }
+    
+    .carrito-resumen p {
+        font-size: 14px;
+    }
+    
+    .principal, .cabecera {
+        font-size: 16px;
+        padding: 6px;
+    }
+    
+    .contenido {
+        font-size: 16px;
+        padding: 6px;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+}
